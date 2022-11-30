@@ -12,24 +12,36 @@ const seed = async () => {
 
   // books
    await Book.create({
-    name: 'Creative Commons Volume 2',
+    name: 'IT',
     authorId: king.id,
   })
   await Book.create({
-    name: 'Zenith',
+    name: 'Misery',
     authorId: king.id,
 
   })
   await Book.create({
-    name: 'No Nations (Instrumentals)',
+    name: 'HP 1',
     authorId: jk.id,
 
   })
+  await Book.create({
+    name: 'HP 2',
+    authorId: jk.id,
+
+  })
+
+  const authors = await Author.findAll()
+
+  const books = await Book.findAll()
+
 
   db.close()
   console.log(`
 
     Seeding successful!
+    # of Books in DB: ${books.length}
+    # of Authors in DB: ${authors.length}
     Amayoz is now ready to read!
 
   `)
