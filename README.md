@@ -9,7 +9,7 @@
 * `npm start`
 * Open another terminal window; from there, `npm run seed` to seed the database
 
-### Windows
+### Windows (not sure if this is need you can probably just follow the macOS instructions in your ubuntu shell)
 
 * `npm install`
 * `createdb amayoz`
